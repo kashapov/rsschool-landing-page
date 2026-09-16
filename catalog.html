@@ -80,21 +80,321 @@
       </header>
 
       <main class="page__main">
-        <section class="section" id="catalog" aria-labelledby="catalog-title">
+        <section class="section catalog" id="catalog" aria-labelledby="catalog-title">
           <div class="container">
             <h1 class="section__title" id="catalog-title">Catalog</h1>
-            <p class="section__lead">Catalog page placeholder.</p>
+            <p class="section__lead">
+              Care modules, role copilots, and PMS connectors — pick what your network needs next.
+            </p>
 
-            <div class="placeholder" id="catalog-categories">
-              Category controls: Care Modules / Role Copilots / Integrations.
+            <div class="catalog-tabs" role="tablist" aria-label="Catalog categories">
+              <button
+                class="catalog-tabs__btn is-active"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                data-category="care-modules"
+              >
+                Care Modules
+              </button>
+              <button
+                class="catalog-tabs__btn"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-category="role-copilots"
+              >
+                Role Copilots
+              </button>
+              <button
+                class="catalog-tabs__btn"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                data-category="integrations"
+              >
+                Integrations
+              </button>
             </div>
 
-            <div class="placeholder" id="catalog-cards">
-              Product cards (8+ in Care Modules) will be added later.
+            <div class="catalog-grid" data-catalog-grid>
+              <article class="catalog-card" data-category="care-modules" tabindex="0">
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/fmx-cadence.svg"
+                  alt="FMX Cadence Standard module preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">FMX Cadence Standard</h3>
+                  <p class="catalog-card__text">
+                    Enforce full-mouth series timing across every practice with priced opportunities.
+                  </p>
+                  <p class="catalog-card__meta">From $89 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-category="care-modules" tabindex="0">
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/fluoride-prophy.svg"
+                  alt="Fluoride at Prophy module preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Fluoride at Prophy</h3>
+                  <p class="catalog-card__text">
+                    Surface qualifying hygiene visits and draft chairside recommendations in one pass.
+                  </p>
+                  <p class="catalog-card__meta">From $59 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-category="care-modules" tabindex="0">
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/perio-reeval.svg"
+                  alt="Perio Re-eval Tracker module preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Perio Re-eval Tracker</h3>
+                  <p class="catalog-card__text">
+                    Keep re-evaluation windows visible so perio cases do not quietly fall off schedule.
+                  </p>
+                  <p class="catalog-card__meta">From $79 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-category="care-modules" tabindex="0">
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/unscheduled.svg"
+                  alt="Unscheduled Treatment module preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Unscheduled Treatment</h3>
+                  <p class="catalog-card__text">
+                    Find diagnosed but unbooked treatment and route it to the right front-office owner.
+                  </p>
+                  <p class="catalog-card__meta">From $99 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-category="care-modules" tabindex="0">
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/same-day.svg"
+                  alt="Same-day Capture module preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Same-day Capture</h3>
+                  <p class="catalog-card__text">
+                    Flag same-day opportunities on today’s schedule before the patient leaves the chair.
+                  </p>
+                  <p class="catalog-card__meta">From $69 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-category="care-modules" tabindex="0">
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/recare.svg"
+                  alt="Hygiene Recare Engine module preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Hygiene Recare Engine</h3>
+                  <p class="catalog-card__text">
+                    Rebuild overdue recare lists with dollar value and preferred outreach channel.
+                  </p>
+                  <p class="catalog-card__meta">From $75 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-category="care-modules" tabindex="0">
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/case-accept.svg"
+                  alt="Case Acceptance Coach module preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Case Acceptance Coach</h3>
+                  <p class="catalog-card__text">
+                    Give providers patient-ready talking points tied to your network’s own standards.
+                  </p>
+                  <p class="catalog-card__meta">From $85 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-category="care-modules" tabindex="0">
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/radio-gap.svg"
+                  alt="Radiograph Gap Finder module preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Radiograph Gap Finder</h3>
+                  <p class="catalog-card__text">
+                    Spot missing films against your cadence before production and quality drift.
+                  </p>
+                  <p class="catalog-card__meta">From $65 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card is-hidden" data-category="role-copilots" tabindex="0" hidden>
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/leadership.svg"
+                  alt="Leadership Copilot preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Leadership Copilot</h3>
+                  <p class="catalog-card__text">
+                    Network health, goal tracking, and practice outliers in one executive view.
+                  </p>
+                  <p class="catalog-card__meta">From $149 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card is-hidden" data-category="role-copilots" tabindex="0" hidden>
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/hygiene-copilot.svg"
+                  alt="Hygiene Leader Copilot preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Hygiene Leader Copilot</h3>
+                  <p class="catalog-card__text">
+                    Daily hygiene priorities with clinical why and earnings context for each provider.
+                  </p>
+                  <p class="catalog-card__meta">From $119 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card is-hidden" data-category="role-copilots" tabindex="0" hidden>
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/front-office.svg"
+                  alt="Front Office Copilot preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Front Office Copilot</h3>
+                  <p class="catalog-card__text">
+                    Ready-to-run outreach and scheduling queues for the front desk every morning.
+                  </p>
+                  <p class="catalog-card__meta">From $99 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card is-hidden" data-category="role-copilots" tabindex="0" hidden>
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/provider.svg"
+                  alt="Provider Copilot preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Provider Copilot</h3>
+                  <p class="catalog-card__text">
+                    Chairside guidance that shows qualifying patients and the reasoning behind each ask.
+                  </p>
+                  <p class="catalog-card__meta">From $109 / seat · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card is-hidden" data-category="integrations" tabindex="0" hidden>
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/dentrix.svg"
+                  alt="Dentrix connector preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Dentrix Connector</h3>
+                  <p class="catalog-card__text">
+                    Read schedules, patients, and production from Dentrix without rip-and-replace.
+                  </p>
+                  <p class="catalog-card__meta">From $49 / practice · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card is-hidden" data-category="integrations" tabindex="0" hidden>
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/open-dental.svg"
+                  alt="Open Dental connector preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Open Dental Connector</h3>
+                  <p class="catalog-card__text">
+                    Sync Open Dental data into CarePulse worklists within days of go-live.
+                  </p>
+                  <p class="catalog-card__meta">From $49 / practice · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card is-hidden" data-category="integrations" tabindex="0" hidden>
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/eaglesoft.svg"
+                  alt="Eaglesoft connector preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Eaglesoft Connector</h3>
+                  <p class="catalog-card__text">
+                    Bring Eaglesoft practices onto the same standards canvas as the rest of the group.
+                  </p>
+                  <p class="catalog-card__meta">From $49 / practice · month</p>
+                </div>
+              </article>
+
+              <article class="catalog-card is-hidden" data-category="integrations" tabindex="0" hidden>
+                <img
+                  class="catalog-card__image"
+                  src="./assets/images/catalog/curve.svg"
+                  alt="Curve connector preview"
+                  width="640"
+                  height="400"
+                />
+                <div class="catalog-card__body">
+                  <h3 class="catalog-card__title">Curve Connector</h3>
+                  <p class="catalog-card__text">
+                    Cloud PMS hookup for Curve locations joining an existing CarePulse network.
+                  </p>
+                  <p class="catalog-card__meta">From $49 / practice · month</p>
+                </div>
+              </article>
             </div>
 
-            <div class="placeholder" id="catalog-more">
-              Show more control will be added later.
+            <div class="catalog-more">
+              <button class="button button--secondary" type="button" data-catalog-more>
+                Show more
+              </button>
             </div>
           </div>
         </section>

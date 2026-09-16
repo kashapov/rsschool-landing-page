@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img">
+  <rect width="640" height="400" fill="#102028"/>
+  <circle cx="520" cy="80" r="90" fill="#5ec8d8" fill-opacity="0.18"/>
+  <circle cx="120" cy="340" r="70" fill="#5ec8d8" fill-opacity="0.12"/>
+  <rect x="48" y="48" width="160" height="10" rx="5" fill="#5ec8d8" fill-opacity="0.7"/>
+  <rect x="48" y="78" width="240" height="8" rx="4" fill="#ffffff" fill-opacity="0.18"/>
+  <rect x="48" y="108" width="200" height="8" rx="4" fill="#ffffff" fill-opacity="0.12"/>
+  <text x="48" y="250" fill="#5ec8d8" font-family="Arial,sans-serif" font-size="64" font-weight="700">OD</text>
+  <rect x="48" y="300" width="110" height="36" rx="10" fill="#5ec8d8" fill-opacity="0.85"/>
+</svg>
