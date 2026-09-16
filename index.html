@@ -80,35 +80,166 @@
       </header>
 
       <main class="page__main">
-        <section class="section hero" id="hero" aria-labelledby="hero-title">
-          <div class="container">
-            <h1 class="section__title" id="hero-title">CarePulse</h1>
-            <p class="section__lead">Hero section placeholder.</p>
-            <div class="placeholder">Hero content will be added in a later stage.</div>
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+          <div class="hero__media" aria-hidden="true">
+            <img
+              class="hero__image"
+              src="./assets/images/hero-network.svg"
+              alt=""
+              width="1440"
+              height="900"
+            />
+          </div>
+          <div class="container hero__content">
+            <h1 class="hero__brand" id="hero-title">CarePulse</h1>
+            <p class="hero__headline">Set standards. Prove them. Push them.</p>
+            <p class="hero__lead">
+              Define care standards for your dental group, validate them on your own data, then
+              roll them out to every practice in a day.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="mailto:hello@carepulse.example">Book a demo</a>
+              <a class="button button--ghost" href="./catalog.html">Explore catalog</a>
+            </div>
           </div>
         </section>
 
         <section class="section" id="how-it-works" aria-labelledby="how-title">
           <div class="container">
             <h2 class="section__title" id="how-title">How it works</h2>
-            <p class="section__lead">How it works section placeholder.</p>
-            <div class="placeholder">Set / Prove / Push blocks will be added later.</div>
+            <p class="section__lead">
+              Three moves that turn policy memos into chairside action across the whole network.
+            </p>
+
+            <ol class="steps">
+              <li class="steps__item">
+                <span class="steps__index" aria-hidden="true">01</span>
+                <h3 class="steps__title">Set</h3>
+                <p class="steps__text">
+                  Write the standard once in plain language — FMX cadence, fluoride at prophy, your
+                  rules — and it covers every location instantly.
+                </p>
+              </li>
+              <li class="steps__item">
+                <span class="steps__index" aria-hidden="true">02</span>
+                <h3 class="steps__title">Prove</h3>
+                <p class="steps__text">
+                  Backtest against last year’s patients and forecast forward before anyone changes a
+                  chairside habit.
+                </p>
+              </li>
+              <li class="steps__item">
+                <span class="steps__index" aria-hidden="true">03</span>
+                <h3 class="steps__title">Push</h3>
+                <p class="steps__text">
+                  Land the standard in morning huddles and daily worklists the same day — communicated,
+                  not commanded.
+                </p>
+              </li>
+            </ol>
           </div>
         </section>
 
-        <section class="section" id="stories" aria-labelledby="stories-title">
+        <section class="section section--muted" id="stories" aria-labelledby="stories-title">
           <div class="container">
-            <h2 class="section__title" id="stories-title">Stories</h2>
-            <p class="section__lead">Testimonials slider placeholder.</p>
-            <div class="placeholder">Slider markup will be added later.</div>
+            <div class="section__header">
+              <div>
+                <h2 class="section__title" id="stories-title">Stories from the network</h2>
+                <p class="section__lead">
+                  Operators using CarePulse to turn missed opportunities into consistent care.
+                </p>
+              </div>
+              <div class="slider__controls">
+                <button class="slider__btn" type="button" data-slider-prev aria-label="Previous story">
+                  <span aria-hidden="true">←</span>
+                </button>
+                <button class="slider__btn" type="button" data-slider-next aria-label="Next story">
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="slider" data-slider>
+              <div class="slider__viewport">
+                <ul class="slider__track">
+                  <li class="slider__slide">
+                    <blockquote class="quote">
+                      <p class="quote__text">
+                        “CarePulse paid for itself in sixty days by capturing missed radiographs and
+                        improving hygiene productivity without another dashboard.”
+                      </p>
+                      <footer class="quote__meta">
+                        <cite class="quote__author">Maya Chen</cite>
+                        <span class="quote__role">Hygiene Leader · 32 locations</span>
+                      </footer>
+                    </blockquote>
+                  </li>
+                  <li class="slider__slide">
+                    <blockquote class="quote">
+                      <p class="quote__text">
+                        “We stopped cascading policy PDFs. Providers see why a patient qualifies and
+                        what it means for their day — so standards stick.”
+                      </p>
+                      <footer class="quote__meta">
+                        <cite class="quote__author">Jordan Blake</cite>
+                        <span class="quote__role">COO · multi-state DSO</span>
+                      </footer>
+                    </blockquote>
+                  </li>
+                  <li class="slider__slide">
+                    <blockquote class="quote">
+                      <p class="quote__text">
+                        “Backtesting a new FMX rule against our own fee schedule removed the guesswork
+                        before we rolled it to every chair.”
+                      </p>
+                      <footer class="quote__meta">
+                        <cite class="quote__author">Dr. Elena Vargas</cite>
+                        <span class="quote__role">Clinical Director · 14 practices</span>
+                      </footer>
+                    </blockquote>
+                  </li>
+                  <li class="slider__slide">
+                    <blockquote class="quote">
+                      <p class="quote__text">
+                        “New acquisitions are live in days. CarePulse reads the PMS as-is — no rip and
+                        replace, no quarter-long IT project.”
+                      </p>
+                      <footer class="quote__meta">
+                        <cite class="quote__author">Sam Okonkwo</cite>
+                        <span class="quote__role">VP Operations · 40+ locations</span>
+                      </footer>
+                    </blockquote>
+                  </li>
+                </ul>
+              </div>
+              <div class="slider__dots" role="tablist" aria-label="Story slides">
+                <button class="slider__dot is-active" type="button" aria-label="Show story 1" aria-current="true"></button>
+                <button class="slider__dot" type="button" aria-label="Show story 2"></button>
+                <button class="slider__dot" type="button" aria-label="Show story 3"></button>
+                <button class="slider__dot" type="button" aria-label="Show story 4"></button>
+              </div>
+            </div>
           </div>
         </section>
 
         <section class="section" id="integrations" aria-labelledby="integrations-title">
-          <div class="container">
-            <h2 class="section__title" id="integrations-title">Integrations</h2>
-            <p class="section__lead">Integrations section placeholder.</p>
-            <div class="placeholder">PMS integrations and CTA will be added later.</div>
+          <div class="container integrations">
+            <div class="integrations__copy">
+              <h2 class="section__title" id="integrations-title">Works with the systems you already run</h2>
+              <p class="section__lead">
+                Connect your practice management software as it is. CarePulse binds the network —
+                no migration project required.
+              </p>
+              <a class="button button--primary" href="./catalog.html">Browse modules &amp; integrations</a>
+            </div>
+            <ul class="integrations__list">
+              <li class="integrations__item">Dentrix</li>
+              <li class="integrations__item">Open Dental</li>
+              <li class="integrations__item">Eaglesoft</li>
+              <li class="integrations__item">Curve</li>
+              <li class="integrations__item">Ascend</li>
+              <li class="integrations__item">Denticon</li>
+            </ul>
           </div>
         </section>
       </main>
