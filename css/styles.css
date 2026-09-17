@@ -826,9 +826,15 @@ p {
 }
 
 .catalog-tabs__btn.is-active {
-  border-color: var(--color-accent);
-  background: var(--color-accent);
-  color: var(--color-accent-contrast);
+  border-color: var(--button-primary-bg);
+  background: var(--button-primary-bg);
+  color: var(--button-primary-fg);
+}
+
+.catalog-tabs__btn.is-active:hover {
+  border-color: var(--button-primary-hover);
+  background: var(--button-primary-hover);
+  color: var(--button-primary-fg);
 }
 
 .catalog-grid {
