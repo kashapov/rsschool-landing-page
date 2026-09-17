@@ -26,6 +26,7 @@
   --logo-mark-bg: #edf7f0;
   --logo-mark-fg: #2a8f58;
   --logo-mark-border: #c5dfce;
+  --logo-corner: #3aa8b8;
   --logo-text: #3a4f45;
 
   --radius-sm: 8px;
@@ -65,6 +66,7 @@
   --logo-mark-bg: #274338;
   --logo-mark-fg: #b6f5c4;
   --logo-mark-border: #6fa887;
+  --logo-corner: #5ec8d8;
   --logo-text: #eef6f1;
 
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 35%);
@@ -211,26 +213,23 @@ p {
 }
 
 .logo__mark {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 2rem;
   height: 2rem;
-  border: 1px solid var(--logo-mark-border);
+  flex-shrink: 0;
+  overflow: hidden;
   border-radius: var(--radius-sm);
-  background: var(--logo-mark-bg);
-  color: var(--logo-mark-fg);
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1;
-  transition:
-    background-color var(--transition),
-    border-color var(--transition),
-    color var(--transition);
+  transition: opacity var(--transition);
+}
+
+.logo__mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .logo:hover .logo__mark {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+  opacity: 0.88;
 }
 
 .logo__text {
