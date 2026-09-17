@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarePulse — Clinical standards that reach every chair</title>
+    <meta
+      name="description"
+      content="CarePulse helps dental groups set care standards, prove them on real data, and push them to every practice."
+    />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem("carepulse-theme");
+          document.documentElement.setAttribute(
+            "data-theme",
+            theme === "dark" ? "dark" : "light"
+          );
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="container header__inner">
+          <a class="logo" href="./index.html" aria-label="CarePulse home">
+            <span class="logo__mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="32" height="32" focusable="false">
+                <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="6.25" fill="var(--logo-mark-bg)" stroke="var(--logo-mark-border)" stroke-width="1.5" />
+                <path d="M16 7v18M7 16h18" fill="none" stroke="var(--logo-mark-fg)" stroke-width="3" stroke-linecap="round" />
+                <path d="M22 7h3v3" fill="none" stroke="var(--logo-corner)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="logo__text">CarePulse</span>
+          </a>
+
+          <nav class="nav" aria-label="Primary">
+            <ul class="nav__list">
+              <li><a class="nav__link" href="#how-it-works">How it works</a></li>
+              <li><a class="nav__link" href="#stories">Stories</a></li>
+              <li><a class="nav__link" href="#integrations">Integrations</a></li>
+              <li><a class="nav__link" href="./catalog.html">Catalog</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__actions">
+            <button
+              class="theme-toggle"
+              type="button"
+              data-theme-toggle
+              aria-pressed="false"
+              aria-label="Switch to dark theme"
+            >
+              <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M20.2 14.1A8.4 8.4 0 0 1 9.9 3.8 8.4 8.4 0 1 0 20.2 14.1Z"
+                />
+              </svg>
+              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="4.2" />
+                  <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.05 5.05l1.55 1.55M17.4 17.4l1.55 1.55M5.05 18.95l1.55-1.55M17.4 6.6l1.55-1.55" />
+                </g>
+              </svg>
+            </button>
+
+            <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="page__main">
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+          <div class="hero__media" aria-hidden="true"></div>
+          <div class="container hero__content">
+            <h1 class="hero__brand" id="hero-title">CarePulse</h1>
+            <p class="hero__headline">Set standards. Prove them. Push them.</p>
+            <p class="hero__lead">
+              Define care standards for your dental group, validate them on your own data, then
+              roll them out to every practice in a day.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="mailto:hello@carepulse.example">Book a demo</a>
+              <a class="button button--ghost" href="./catalog.html">Explore catalog</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="how-it-works" aria-labelledby="how-title">
+          <div class="container">
+            <h2 class="section__title" id="how-title">How it works</h2>
+            <p class="section__lead">
+              Three moves that turn policy memos into chairside action across the whole network.
+            </p>
+
+            <ol class="steps">
+              <li class="steps__item">
+                <span class="steps__index" aria-hidden="true">01</span>
+                <h3 class="steps__title">Set</h3>
+                <p class="steps__text">
+                  Write the standard once in plain language — FMX cadence, fluoride at prophy, your
+                  rules — and it covers every location instantly.
+                </p>
+              </li>
+              <li class="steps__item">
+                <span class="steps__index" aria-hidden="true">02</span>
+                <h3 class="steps__title">Prove</h3>
+                <p class="steps__text">
+                  Backtest against last year’s patients and forecast forward before anyone changes a
+                  chairside habit.
+                </p>
+              </li>
+              <li class="steps__item">
+                <span class="steps__index" aria-hidden="true">03</span>
+                <h3 class="steps__title">Push</h3>
+                <p class="steps__text">
+                  Land the standard in morning huddles and daily worklists the same day — communicated,
+                  not commanded.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="section section--muted" id="stories" aria-labelledby="stories-title">
+          <div class="container">
+            <div class="section__header">
+              <div>
+                <h2 class="section__title" id="stories-title">Stories from the network</h2>
+                <p class="section__lead">
+                  Operators using CarePulse to turn missed opportunities into consistent care.
+                </p>
+              </div>
+              <div class="slider__controls">
+                <button class="slider__btn" type="button" data-slider-prev aria-label="Previous story">
+                  <span aria-hidden="true">←</span>
+                </button>
+                <button class="slider__btn" type="button" data-slider-next aria-label="Next story">
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="slider" data-slider>
+              <div class="slider__viewport">
+                <ul class="slider__track">
+                  <li class="slider__slide">
+                    <blockquote class="quote">
+                      <p class="quote__text">
+                        “CarePulse paid for itself in sixty days by capturing missed radiographs and
+                        improving hygiene productivity without another dashboard.”
+                      </p>
+                      <footer class="quote__meta">
+                        <cite class="quote__author">Maya Chen</cite>
+                        <span class="quote__role">Hygiene Leader · 32 locations</span>
+                      </footer>
+                    </blockquote>
+                  </li>
+                  <li class="slider__slide">
+                    <blockquote class="quote">
+                      <p class="quote__text">
+                        “We stopped cascading policy PDFs. Providers see why a patient qualifies and
+                        what it means for their day — so standards stick.”
+                      </p>
+                      <footer class="quote__meta">
+                        <cite class="quote__author">Jordan Blake</cite>
+                        <span class="quote__role">COO · multi-state DSO</span>
+                      </footer>
+                    </blockquote>
+                  </li>
+                  <li class="slider__slide">
+                    <blockquote class="quote">
+                      <p class="quote__text">
+                        “Backtesting a new FMX rule against our own fee schedule removed the guesswork
+                        before we rolled it to every chair.”
+                      </p>
+                      <footer class="quote__meta">
+                        <cite class="quote__author">Dr. Elena Vargas</cite>
+                        <span class="quote__role">Clinical Director · 14 practices</span>
+                      </footer>
+                    </blockquote>
+                  </li>
+                  <li class="slider__slide">
+                    <blockquote class="quote">
+                      <p class="quote__text">
+                        “New acquisitions are live in days. CarePulse reads the PMS as-is — no rip and
+                        replace, no quarter-long IT project.”
+                      </p>
+                      <footer class="quote__meta">
+                        <cite class="quote__author">Sam Okonkwo</cite>
+                        <span class="quote__role">VP Operations · 40+ locations</span>
+                      </footer>
+                    </blockquote>
+                  </li>
+                </ul>
+              </div>
+              <div class="slider__dots" role="tablist" aria-label="Story slides">
+                <button class="slider__dot is-active" type="button" aria-label="Show story 1" aria-current="true"></button>
+                <button class="slider__dot" type="button" aria-label="Show story 2"></button>
+                <button class="slider__dot" type="button" aria-label="Show story 3"></button>
+                <button class="slider__dot" type="button" aria-label="Show story 4"></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="integrations" aria-labelledby="integrations-title">
+          <div class="container integrations">
+            <div class="integrations__copy">
+              <h2 class="section__title" id="integrations-title">Works with the systems you already run</h2>
+              <p class="section__lead">
+                Connect your practice management software as it is. CarePulse binds the network —
+                no migration project required.
+              </p>
+              <a class="button button--primary" href="./catalog.html">Browse modules &amp; integrations</a>
+            </div>
+            <ul class="integrations__list">
+              <li class="integrations__item">Dentrix</li>
+              <li class="integrations__item">Open Dental</li>
+              <li class="integrations__item">Eaglesoft</li>
+              <li class="integrations__item">Curve</li>
+              <li class="integrations__item">Ascend</li>
+              <li class="integrations__item">Denticon</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__brand">
+              <a class="logo" href="./index.html" aria-label="CarePulse home">
+                <span class="logo__mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="32" height="32" focusable="false">
+                <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="6.25" fill="var(--logo-mark-bg)" stroke="var(--logo-mark-border)" stroke-width="1.5" />
+                <path d="M16 7v18M7 16h18" fill="none" stroke="var(--logo-mark-fg)" stroke-width="3" stroke-linecap="round" />
+                <path d="M22 7h3v3" fill="none" stroke="var(--logo-corner)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+                <span class="logo__text">CarePulse</span>
+              </a>
+              <p class="footer__text">
+                Care standards for dental groups — set once, prove on your data, push to every chair.
+              </p>
+            </div>
+
+            <div>
+              <h2 class="footer__title">Contact</h2>
+              <ul class="footer__list">
+                <li>
+                  <a class="footer__link" href="mailto:hello@carepulse.example">hello@carepulse.example</a>
+                </li>
+                <li>
+                  <a class="footer__link" href="tel:+12025550198">+1 (202) 555-0198</a>
+                </li>
+                <li>
+                  <a
+                    class="footer__link"
+                    href="https://www.google.com/maps/search/?api=1&query=100+Market+Street+San+Francisco"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    100 Market Street, San Francisco
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="footer__title">Social</h2>
+              <ul class="footer__list">
+                <li>
+                  <a
+                    class="footer__link"
+                    href="https://github.com/kashapov"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="footer__link"
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__link" href="./catalog.html">Catalog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <p>© 2026 CarePulse. Educational project for RS School.</p>
+            <a
+              class="footer__rs"
+              href="https://rs.school/courses/javascript-ru"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="footer__rs-logo"
+                src="https://rs.school/favicon.ico"
+                width="24"
+                height="24"
+                alt="RS School"
+              />
+              RS School
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/theme.js"></script>
+  </body>
+</html>
