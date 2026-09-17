@@ -17,6 +17,9 @@
   --color-accent-hover: #187543;
   --color-accent-soft: #9fefb0;
   --color-accent-contrast: #06140c;
+  --button-primary-bg: #1f8a4f;
+  --button-primary-fg: #ffffff;
+  --button-primary-hover: #176f3f;
   --color-hero-from: #0f1714;
   --color-hero-to: #1a2e26;
   --color-hero-text: #f4f7f5;
@@ -57,6 +60,9 @@
   --color-accent-hover: #b8f5c4;
   --color-accent-soft: #9fefb0;
   --color-accent-contrast: #06140c;
+  --button-primary-bg: #9fefb0;
+  --button-primary-fg: #06140c;
+  --button-primary-hover: #b8f5c4;
   --color-hero-from: #080e0c;
   --color-hero-to: #14231d;
   --color-hero-text: #f4f7f5;
@@ -441,12 +447,12 @@ p {
 }
 
 .button--primary {
-  background: var(--color-accent);
-  color: var(--color-accent-contrast);
+  background: var(--button-primary-bg);
+  color: var(--button-primary-fg);
 }
 
 .button--primary:hover {
-  background: var(--color-accent-hover);
+  background: var(--button-primary-hover);
 }
 
 .button--secondary {
