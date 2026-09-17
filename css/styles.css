@@ -719,9 +719,14 @@ p {
 }
 
 .slider__dot {
+  flex-shrink: 0;
+  box-sizing: border-box;
   width: 0.55rem;
   height: 0.55rem;
+  padding: 0;
+  border: none;
   border-radius: 50%;
+  aspect-ratio: 1;
   background: var(--color-border);
   transition:
     background-color var(--transition),
