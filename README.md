@@ -18,4 +18,4 @@ HTML, CSS, JavaScript (без фреймворков и UI-библиотек).
 
 ## Деплой
 
-Ссылка на деплой будет добавлена после завершения соответствующей части задания.
+Часть 1: [https://kashapov.github.io/rsschool-landing-page/](https://kashapov.github.io/rsschool-landing-page/)
