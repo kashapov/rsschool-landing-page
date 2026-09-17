@@ -6,21 +6,22 @@
   --font-sans: "Outfit", system-ui, sans-serif;
   --font-display: "Fraunces", Georgia, serif;
 
-  --color-bg: #f4f7f5;
+  --color-bg: #f3f6f4;
   --color-bg-elevated: #ffffff;
-  --color-bg-muted: #e8efe9;
-  --color-surface: #dfeae2;
-  --color-text: #14201b;
-  --color-text-muted: #4d5f56;
-  --color-border: #c5d4cb;
-  --color-accent: #2f9e5f;
+  --color-bg-muted: #e4ece6;
+  --color-surface: #d7e3db;
+  --color-text: #101a16;
+  --color-text-muted: #3f5249;
+  --color-border: #b9c9bf;
+  --color-accent: #1f8a4f;
+  --color-accent-hover: #187543;
   --color-accent-soft: #9fefb0;
-  --color-accent-contrast: #0a1a12;
+  --color-accent-contrast: #06140c;
   --color-hero-from: #0f1714;
   --color-hero-to: #1a2e26;
   --color-hero-text: #f4f7f5;
-  --color-hero-muted: #b7c9be;
-  --color-focus: #2f9e5f;
+  --color-hero-muted: #c2d2c8;
+  --color-focus: #1f8a4f;
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -30,28 +31,30 @@
   --shadow-md: 0 12px 32px rgb(20 32 27 / 8%);
 
   --container-width: 1120px;
+  --container-gutter: clamp(0.75rem, 4vw, 1.25rem);
   --header-height: 72px;
-  --space-section: clamp(3.5rem, 8vw, 6rem);
+  --space-section: clamp(3rem, 7vw, 6rem);
   --transition: 0.25s ease;
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --color-bg: #0f1714;
-  --color-bg-elevated: #16211c;
-  --color-bg-muted: #1c2a24;
-  --color-surface: #24332c;
-  --color-text: #eef5f0;
-  --color-text-muted: #a8b9b0;
-  --color-border: #31423a;
+  --color-bg: #0d1411;
+  --color-bg-elevated: #15201b;
+  --color-bg-muted: #1a2620;
+  --color-surface: #22312a;
+  --color-text: #f2f7f4;
+  --color-text-muted: #b3c3ba;
+  --color-border: #354740;
   --color-accent: #9fefb0;
-  --color-accent-soft: #2f9e5f;
-  --color-accent-contrast: #0a1a12;
-  --color-hero-from: #0a100e;
-  --color-hero-to: #15241e;
+  --color-accent-hover: #b8f5c4;
+  --color-accent-soft: #9fefb0;
+  --color-accent-contrast: #06140c;
+  --color-hero-from: #080e0c;
+  --color-hero-to: #14231d;
   --color-hero-text: #f4f7f5;
-  --color-hero-muted: #a8b9b0;
+  --color-hero-muted: #b7c9be;
   --color-focus: #9fefb0;
 
   --shadow-sm: 0 1px 2px rgb(0 0 0 / 35%);
@@ -66,12 +69,14 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 0.75rem);
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.6;
@@ -121,7 +126,7 @@ p {
 }
 
 .container {
-  width: min(100% - 2.5rem, var(--container-width));
+  width: min(100% - (var(--container-gutter) * 2), var(--container-width));
   margin-inline: auto;
 }
 
@@ -201,7 +206,7 @@ p {
   height: 2rem;
   border-radius: var(--radius-sm);
   background: var(--color-hero-from);
-  color: var(--color-accent-soft);
+  color: #9fefb0;
   font-size: 1.1rem;
   line-height: 1;
 }
@@ -218,7 +223,9 @@ p {
 .nav__list {
   display: flex;
   align-items: center;
-  gap: 0.25rem 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.25rem 1.25rem;
 }
 
 .nav__link {
@@ -413,7 +420,7 @@ p {
 }
 
 .button--primary:hover {
-  opacity: 0.9;
+  background: var(--color-accent-hover);
 }
 
 .button--secondary {
@@ -454,6 +461,19 @@ p {
   position: absolute;
   inset: 0;
   z-index: 0;
+}
+
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgb(8 14 12 / 78%) 0%,
+    rgb(8 14 12 / 45%) 48%,
+    rgb(8 14 12 / 25%) 100%
+  );
+  pointer-events: none;
 }
 
 .hero__image {
@@ -798,21 +818,53 @@ p {
   margin-top: 2rem;
 }
 
+/* Wide desktop: keep content centered, backgrounds full-bleed */
+@media (min-width: 1441px) {
+  .container {
+    width: min(100% - 4rem, var(--container-width));
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav__list {
+    gap: 0.2rem 1rem;
+  }
+
+  .nav__link {
+    font-size: 0.9rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 1024px) {
   .steps {
     grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
 
   .integrations {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .catalog-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .hero__content {
+    max-width: 36rem;
+  }
 }
 
+/* Tablet and below: burger replaces primary nav */
 @media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
   .nav {
     display: none;
   }
@@ -823,11 +875,31 @@ p {
 
   .footer__inner {
     grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero {
     min-height: min(88vh, 720px);
     align-items: center;
+    padding-block: 5rem 3.5rem;
+  }
+
+  .hero__brand {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+  }
+
+  .hero__actions {
+    width: 100%;
+  }
+
+  .hero__actions .button {
+    flex: 1 1 auto;
+    min-width: min(100%, 10rem);
   }
 
   .section__header {
@@ -835,12 +907,22 @@ p {
     align-items: flex-start;
   }
 
+  .slider__slide {
+    padding: 1.5rem;
+  }
+
   .integrations__list {
     grid-template-columns: 1fr 1fr;
   }
 
+  .catalog-tabs__btn {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
   .catalog-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 
   .catalog-grid .catalog-card[data-category="care-modules"]:nth-of-type(n + 5) {
@@ -860,12 +942,71 @@ p {
   }
 }
 
+/* Narrow phones including 380px checkpoint */
 @media (max-width: 480px) {
+  .logo__text {
+    font-size: 0.98rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-block: 4.5rem 3rem;
+  }
+
+  .hero__lead {
+    font-size: 1rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+  }
+
+  .steps__title {
+    font-size: 1.5rem;
+  }
+
   .integrations__list {
     grid-template-columns: 1fr;
   }
 
   .catalog-grid {
     grid-template-columns: 1fr;
+  }
+
+  .catalog-card__body {
+    padding: 0.95rem 1rem 1.1rem;
+  }
+
+  .slider__controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 380px) {
+  .header__inner {
+    gap: 0.5rem;
+  }
+
+  .section__title {
+    font-size: 1.6rem;
+  }
+
+  .quote__text {
+    font-size: 1.15rem;
+  }
+
+  .catalog-tabs {
+    gap: 0.4rem;
+  }
+
+  .catalog-tabs__btn {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.88rem;
   }
 }
