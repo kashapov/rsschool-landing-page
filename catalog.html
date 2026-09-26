@@ -86,13 +86,29 @@
               </svg>
             </button>
 
-            <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
+            <button
+              class="burger"
+              type="button"
+              data-burger
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
               <span class="burger__line"></span>
               <span class="burger__line"></span>
               <span class="burger__line"></span>
             </button>
           </div>
         </div>
+
+        <nav class="mobile-menu" id="mobile-menu" data-mobile-menu aria-label="Mobile" hidden>
+          <ul class="mobile-menu__list">
+            <li><a class="mobile-menu__link" href="./index.html#how-it-works">How it works</a></li>
+            <li><a class="mobile-menu__link" href="./index.html#stories">Stories</a></li>
+            <li><a class="mobile-menu__link" href="./index.html#integrations">Integrations</a></li>
+            <li><a class="mobile-menu__link" href="./catalog.html">Catalog</a></li>
+          </ul>
+        </nav>
       </header>
 
       <main class="page__main">
@@ -510,5 +526,6 @@
     </div>
 
     <script src="./js/theme.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
