@@ -160,6 +160,52 @@
         </section>
       </main>
 
+      <div class="modal" data-modal hidden>
+        <div class="modal__backdrop" data-modal-close tabindex="-1"></div>
+        <div
+          class="modal__dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+        >
+          <button class="modal__close" type="button" data-modal-close aria-label="Close dialog">
+            <span aria-hidden="true">×</span>
+          </button>
+          <div class="modal__layout">
+            <img class="modal__image" data-modal-image src="" alt="" width="640" height="400" />
+            <div class="modal__content">
+              <h2 class="modal__title" id="modal-title" data-modal-title></h2>
+              <p class="modal__description" data-modal-description></p>
+
+              <div class="modal__params">
+                <div class="modal__param">
+                  <p class="modal__param-label" id="modal-plan-label">Plan</p>
+                  <div
+                    class="modal__options"
+                    data-modal-plans
+                    role="group"
+                    aria-labelledby="modal-plan-label"
+                  ></div>
+                </div>
+                <div class="modal__param">
+                  <p class="modal__param-label" id="modal-billing-label">Billing</p>
+                  <div
+                    class="modal__options"
+                    data-modal-billing
+                    role="group"
+                    aria-labelledby="modal-billing-label"
+                  ></div>
+                </div>
+              </div>
+
+              <p class="modal__price">
+                <span data-modal-price></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <footer class="footer">
         <div class="container">
           <div class="footer__inner">
@@ -257,5 +303,6 @@
     <script src="./js/menu.js"></script>
     <script src="./js/products.js"></script>
     <script src="./js/catalog.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
