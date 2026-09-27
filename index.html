@@ -22,10 +22,10 @@
           var theme = localStorage.getItem("carepulse-theme");
           document.documentElement.setAttribute(
             "data-theme",
-            theme === "dark" ? "dark" : "light"
+            theme === "light" ? "light" : "dark"
           );
         } catch (e) {
-          document.documentElement.setAttribute("data-theme", "light");
+          document.documentElement.setAttribute("data-theme", "dark");
         }
       })();
     </script>
@@ -59,8 +59,8 @@
               class="theme-toggle"
               type="button"
               data-theme-toggle
-              aria-pressed="false"
-              aria-label="Switch to dark theme"
+              aria-pressed="true"
+              aria-label="Switch to light theme"
             >
               <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
                 <path
