@@ -976,6 +976,10 @@ body.is-menu-open {
   margin-top: 2rem;
 }
 
+.catalog-more.is-visible {
+  display: flex;
+}
+
 /* Wide desktop: keep content centered, backgrounds full-bleed */
 @media (min-width: 1441px) {
   .container {
@@ -1085,22 +1089,6 @@ body.is-menu-open {
   .catalog-grid {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-  }
-
-  .catalog-grid .catalog-card[data-category="care-modules"]:nth-of-type(n + 5) {
-    display: none;
-  }
-
-  .catalog-grid.is-expanded .catalog-card[data-category="care-modules"] {
-    display: flex;
-  }
-
-  .catalog-more {
-    display: flex;
-  }
-
-  .catalog-grid.is-expanded + .catalog-more {
-    display: none;
   }
 }
 
