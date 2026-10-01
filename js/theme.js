@@ -17,7 +17,7 @@ function storeTheme(theme) {
 }
 
 function applyTheme(theme) {
-  const nextTheme = theme === "dark" ? "dark" : "light";
+  const nextTheme = theme === "light" ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", nextTheme);
 
   document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
@@ -32,7 +32,7 @@ function applyTheme(theme) {
 
 function initTheme() {
   const stored = getStoredTheme();
-  applyTheme(stored === "dark" || stored === "light" ? stored : "light");
+  applyTheme(stored === "light" ? "light" : "dark");
 
   document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
     button.addEventListener("click", () => {

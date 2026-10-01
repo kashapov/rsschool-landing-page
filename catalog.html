@@ -22,10 +22,10 @@
           var theme = localStorage.getItem("carepulse-theme");
           document.documentElement.setAttribute(
             "data-theme",
-            theme === "dark" ? "dark" : "light"
+            theme === "light" ? "light" : "dark"
           );
         } catch (e) {
-          document.documentElement.setAttribute("data-theme", "light");
+          document.documentElement.setAttribute("data-theme", "dark");
         }
       })();
     </script>
@@ -59,8 +59,8 @@
               class="theme-toggle"
               type="button"
               data-theme-toggle
-              aria-pressed="false"
-              aria-label="Switch to dark theme"
+              aria-pressed="true"
+              aria-label="Switch to light theme"
             >
               <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
                 <path
@@ -86,13 +86,29 @@
               </svg>
             </button>
 
-            <button class="burger" type="button" aria-label="Open menu" aria-expanded="false">
+            <button
+              class="burger"
+              type="button"
+              data-burger
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
               <span class="burger__line"></span>
               <span class="burger__line"></span>
               <span class="burger__line"></span>
             </button>
           </div>
         </div>
+
+        <nav class="mobile-menu" id="mobile-menu" data-mobile-menu aria-label="Mobile" hidden>
+          <ul class="mobile-menu__list">
+            <li><a class="mobile-menu__link" href="./index.html#how-it-works">How it works</a></li>
+            <li><a class="mobile-menu__link" href="./index.html#stories">Stories</a></li>
+            <li><a class="mobile-menu__link" href="./index.html#integrations">Integrations</a></li>
+            <li><a class="mobile-menu__link" href="./catalog.html">Catalog</a></li>
+          </ul>
+        </nav>
       </header>
 
       <main class="page__main">
@@ -133,281 +149,9 @@
               </button>
             </div>
 
-            <div class="catalog-grid" data-catalog-grid>
-              <article class="catalog-card" data-category="care-modules" tabindex="0">
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/fmx-cadence.svg"
-                  alt="FMX Cadence Standard module preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">FMX Cadence Standard</h3>
-                  <p class="catalog-card__text">
-                    Enforce full-mouth series timing across every practice with priced opportunities.
-                  </p>
-                  <p class="catalog-card__meta">From $89 / seat · month</p>
-                </div>
-              </article>
+            <div class="catalog-grid" data-catalog-grid></div>
 
-              <article class="catalog-card" data-category="care-modules" tabindex="0">
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/fluoride-prophy.svg"
-                  alt="Fluoride at Prophy module preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Fluoride at Prophy</h3>
-                  <p class="catalog-card__text">
-                    Surface qualifying hygiene visits and draft chairside recommendations in one pass.
-                  </p>
-                  <p class="catalog-card__meta">From $59 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card" data-category="care-modules" tabindex="0">
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/perio-reeval.svg"
-                  alt="Perio Re-eval Tracker module preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Perio Re-eval Tracker</h3>
-                  <p class="catalog-card__text">
-                    Keep re-evaluation windows visible so perio cases do not quietly fall off schedule.
-                  </p>
-                  <p class="catalog-card__meta">From $79 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card" data-category="care-modules" tabindex="0">
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/unscheduled.svg"
-                  alt="Unscheduled Treatment module preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Unscheduled Treatment</h3>
-                  <p class="catalog-card__text">
-                    Find diagnosed but unbooked treatment and route it to the right front-office owner.
-                  </p>
-                  <p class="catalog-card__meta">From $99 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card" data-category="care-modules" tabindex="0">
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/same-day.svg"
-                  alt="Same-day Capture module preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Same-day Capture</h3>
-                  <p class="catalog-card__text">
-                    Flag same-day opportunities on today’s schedule before the patient leaves the chair.
-                  </p>
-                  <p class="catalog-card__meta">From $69 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card" data-category="care-modules" tabindex="0">
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/recare.svg"
-                  alt="Hygiene Recare Engine module preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Hygiene Recare Engine</h3>
-                  <p class="catalog-card__text">
-                    Rebuild overdue recare lists with dollar value and preferred outreach channel.
-                  </p>
-                  <p class="catalog-card__meta">From $75 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card" data-category="care-modules" tabindex="0">
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/case-accept.svg"
-                  alt="Case Acceptance Coach module preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Case Acceptance Coach</h3>
-                  <p class="catalog-card__text">
-                    Give providers patient-ready talking points tied to your network’s own standards.
-                  </p>
-                  <p class="catalog-card__meta">From $85 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card" data-category="care-modules" tabindex="0">
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/radio-gap.svg"
-                  alt="Radiograph Gap Finder module preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Radiograph Gap Finder</h3>
-                  <p class="catalog-card__text">
-                    Spot missing films against your cadence before production and quality drift.
-                  </p>
-                  <p class="catalog-card__meta">From $65 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card is-hidden" data-category="role-copilots" tabindex="0" hidden>
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/leadership.svg"
-                  alt="Leadership Copilot preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Leadership Copilot</h3>
-                  <p class="catalog-card__text">
-                    Network health, goal tracking, and practice outliers in one executive view.
-                  </p>
-                  <p class="catalog-card__meta">From $149 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card is-hidden" data-category="role-copilots" tabindex="0" hidden>
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/hygiene-copilot.svg"
-                  alt="Hygiene Leader Copilot preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Hygiene Leader Copilot</h3>
-                  <p class="catalog-card__text">
-                    Daily hygiene priorities with clinical why and earnings context for each provider.
-                  </p>
-                  <p class="catalog-card__meta">From $119 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card is-hidden" data-category="role-copilots" tabindex="0" hidden>
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/front-office.svg"
-                  alt="Front Office Copilot preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Front Office Copilot</h3>
-                  <p class="catalog-card__text">
-                    Ready-to-run outreach and scheduling queues for the front desk every morning.
-                  </p>
-                  <p class="catalog-card__meta">From $99 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card is-hidden" data-category="role-copilots" tabindex="0" hidden>
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/provider.svg"
-                  alt="Provider Copilot preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Provider Copilot</h3>
-                  <p class="catalog-card__text">
-                    Chairside guidance that shows qualifying patients and the reasoning behind each ask.
-                  </p>
-                  <p class="catalog-card__meta">From $109 / seat · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card is-hidden" data-category="integrations" tabindex="0" hidden>
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/dentrix.svg"
-                  alt="Dentrix connector preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Dentrix Connector</h3>
-                  <p class="catalog-card__text">
-                    Read schedules, patients, and production from Dentrix without rip-and-replace.
-                  </p>
-                  <p class="catalog-card__meta">From $49 / practice · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card is-hidden" data-category="integrations" tabindex="0" hidden>
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/open-dental.svg"
-                  alt="Open Dental connector preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Open Dental Connector</h3>
-                  <p class="catalog-card__text">
-                    Sync Open Dental data into CarePulse worklists within days of go-live.
-                  </p>
-                  <p class="catalog-card__meta">From $49 / practice · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card is-hidden" data-category="integrations" tabindex="0" hidden>
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/eaglesoft.svg"
-                  alt="Eaglesoft connector preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Eaglesoft Connector</h3>
-                  <p class="catalog-card__text">
-                    Bring Eaglesoft practices onto the same standards canvas as the rest of the group.
-                  </p>
-                  <p class="catalog-card__meta">From $49 / practice · month</p>
-                </div>
-              </article>
-
-              <article class="catalog-card is-hidden" data-category="integrations" tabindex="0" hidden>
-                <img
-                  class="catalog-card__image"
-                  src="./assets/images/catalog/curve.svg"
-                  alt="Curve connector preview"
-                  width="640"
-                  height="400"
-                />
-                <div class="catalog-card__body">
-                  <h3 class="catalog-card__title">Curve Connector</h3>
-                  <p class="catalog-card__text">
-                    Cloud PMS hookup for Curve locations joining an existing CarePulse network.
-                  </p>
-                  <p class="catalog-card__meta">From $49 / practice · month</p>
-                </div>
-              </article>
-            </div>
-
-            <div class="catalog-more">
+            <div class="catalog-more" hidden>
               <button class="button button--secondary" type="button" data-catalog-more>
                 Show more
               </button>
@@ -415,6 +159,52 @@
           </div>
         </section>
       </main>
+
+      <div class="modal" data-modal hidden>
+        <div class="modal__backdrop" data-modal-close tabindex="-1"></div>
+        <div
+          class="modal__dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+        >
+          <button class="modal__close" type="button" data-modal-close aria-label="Close dialog">
+            <span aria-hidden="true">×</span>
+          </button>
+          <div class="modal__layout">
+            <img class="modal__image" data-modal-image src="" alt="" width="640" height="400" />
+            <div class="modal__content">
+              <h2 class="modal__title" id="modal-title" data-modal-title></h2>
+              <p class="modal__description" data-modal-description></p>
+
+              <div class="modal__params">
+                <div class="modal__param">
+                  <p class="modal__param-label" id="modal-plan-label">Plan</p>
+                  <div
+                    class="modal__options"
+                    data-modal-plans
+                    role="group"
+                    aria-labelledby="modal-plan-label"
+                  ></div>
+                </div>
+                <div class="modal__param">
+                  <p class="modal__param-label" id="modal-billing-label">Billing</p>
+                  <div
+                    class="modal__options"
+                    data-modal-billing
+                    role="group"
+                    aria-labelledby="modal-billing-label"
+                  ></div>
+                </div>
+              </div>
+
+              <p class="modal__price">
+                <span data-modal-price></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <footer class="footer">
         <div class="container">
@@ -510,5 +300,9 @@
     </div>
 
     <script src="./js/theme.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/catalog.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
