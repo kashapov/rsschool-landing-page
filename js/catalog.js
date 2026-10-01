@@ -1,5 +1,5 @@
 const CATALOG_MOBILE_LIMIT = 4;
-const CATALOG_MQ = window.matchMedia("(max-width: 768px)");
+const CATALOG_MQ = window.matchMedia("(width <= 768px)");
 
 function initCatalog() {
   const grid = document.querySelector("[data-catalog-grid]");

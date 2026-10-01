@@ -1,4 +1,4 @@
-const MENU_MQ = window.matchMedia("(max-width: 768px)");
+const MENU_MQ = window.matchMedia("(width <= 768px)");
 
 function initMenu() {
   const burger = document.querySelector("[data-burger]");

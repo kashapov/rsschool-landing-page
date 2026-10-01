@@ -1146,7 +1146,7 @@ body.is-modal-open {
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .modal {
     padding: 0.75rem;
     align-items: flex-end;
@@ -1224,8 +1224,8 @@ body.is-modal-open {
   }
 }
 
-/* Tablet and below: burger replaces primary nav */
-@media (max-width: 768px) {
+/* Tablet and below: burger replaces primary nav (<=768px) */
+@media (width <= 768px) {
   :root {
     --header-height: 64px;
   }
